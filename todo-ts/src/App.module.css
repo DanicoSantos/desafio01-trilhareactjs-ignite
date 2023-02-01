@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    background: var(--gray-700);
+    align-items: center;
+    justify-content: center;
+    height: 12.5rem;
+    max-width: 100%;
+}
+
+.logo {
+    width: 7.875rem;
+    height: 3rem;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
