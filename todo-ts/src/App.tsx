@@ -5,6 +5,7 @@ import { NewTask } from './components/NewTask';
 
 import styles from './App.module.css';
 import './global.css';
+import { TaskBoard } from './components/TaskBoard';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
       </header>
       <main className={styles.wrapper}>
         <NewTask/>
-        <div className='task-board'></div>
+        <TaskBoard/>
       </main>
     </div>
   )
