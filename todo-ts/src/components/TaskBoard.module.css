@@ -42,15 +42,19 @@
 }
 
 .taskBoard main {
-    display: flex;
+    
+}
+
+.taskBoard main>div:first-child {
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 
-    padding: 4rem 1.5rem;
     width: 100%;
     border-top: 1px solid var(--gray-400);
+    padding: 4rem 1.5rem;
 }
 
 .taskBoard main>img {
@@ -58,11 +62,11 @@
     height: 3.5rem;
 }
 
-.taskBoard main>div>p {
+.taskBoard main>div>div>p {
     text-align: center;
 }
 
-.taskBoard main>div>p:first-child {
+.taskBoard main>div>div>p:first-child {
     font-weight: 700;
     font-size: 1rem;
     line-height: 140%;

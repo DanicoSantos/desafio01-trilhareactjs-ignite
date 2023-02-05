@@ -1,6 +1,7 @@
 import style from './TaskBoard.module.css'
 
 import clipboard from '../assets/clipboard.svg'
+import { Task } from './Task'
 
 export function TaskBoard() {
     return (
@@ -10,11 +11,15 @@ export function TaskBoard() {
                 <div>Concluídas <span>0</span></div>
             </header>
             <main>
-                <img src={clipboard} />
                 <div>
-                    <p>Você ainda não tem tarefas cadastradas</p>
-                    <p>Crie tarefas e organize seus itens a fazer</p>
+                    <img src={clipboard} />
+                    <div>
+                        <p>Você ainda não tem tarefas cadastradas</p>
+                        <p>Crie tarefas e organize seus itens a fazer</p>
+                    </div>
                 </div>
+                <Task status="pending" />
+                <Task status="finished" />
             </main>
         </div>
     )
