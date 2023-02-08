@@ -19,3 +19,137 @@
     justify-content: space-between;
     width: 100%;
 }
+
+/* newTask */
+
+.newTask .form {
+    margin-top: -2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newTask .formGroup {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.newTask .formGroup button[type="submit"] {
+    background: var(--blue-dark);
+    border-radius: 8px;
+    color: var(--gray-100);
+    line-height: 140%;
+    font-weight: 700;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    padding: 1rem;
+
+    cursor: pointer;
+}
+
+.newTask .formGroup button[type="submit"]:hover {
+    background: var(--blue);
+}
+
+.newTask .formGroup button[type="submit"]:disabled {
+    background: var(--blue-dark);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.newTask .newTaskInput {
+    background: var(--gray-500);
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    color: var(--gray-300);
+    line-height: 140%;
+    padding: 1rem;
+    width: 39.875rem;
+}
+
+/* TaskBoard */
+
+.taskBoard {
+    margin-top: 3rem;
+    width: 46rem;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 1.5rem;
+}
+
+.taskBoard header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.taskBoard header div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.0625rem;
+    color: var(--blue);
+}
+
+.taskBoard header div:last-child {
+    color: var(--purple);
+}
+
+.taskBoard header div > span {
+    background: var(--gray-400);
+    color: var(--gray-100);
+    border-radius: 50%;
+    padding: 0.125rem 0.5rem;
+}
+
+.taskBoard main {
+    width: 100%;
+}
+
+.taskBoard main > .emptyBoard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+    border-top: 1px solid var(--gray-400);
+    padding: 4rem 1.5rem;
+}
+
+.taskBoard main > .notEmptyBoard {
+    display: none;
+}
+
+.taskBoard main > .emptyBoard > img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.taskBoard main>div>div>p {
+    text-align: center;
+}
+
+.taskBoard main>div>div>p:first-child {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 140%;
+}
