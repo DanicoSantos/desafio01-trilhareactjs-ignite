@@ -6,11 +6,16 @@ interface TaskProps {
     content: string
     status: 'pending' | 'finished'
     onChangeTaskStatus: (id: string) => void
+    onDeleteTask: (id: string) => void
 }
 
-export function Task({ content, status, id, onChangeTaskStatus }: TaskProps) {
+export function Task({ content, status, id, onChangeTaskStatus, onDeleteTask }: TaskProps) {
     function handleChangeTaskStatus() {
         onChangeTaskStatus(id)
+    }
+
+    function handleDeleteTask() {
+        onDeleteTask(id)
     }
     return (
        
@@ -22,7 +27,7 @@ export function Task({ content, status, id, onChangeTaskStatus }: TaskProps) {
                 {content}
                 </p>
             <span>
-                <Trash />
+                <Trash onClick={handleDeleteTask} />
             </span>
         </div>
     )

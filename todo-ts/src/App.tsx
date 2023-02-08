@@ -61,6 +61,17 @@ function App() {
     setTasks(updatedTasks)
   }
 
+  function deleteTask(taskId: string) {
+    const updatedTasks = tasks.filter(task => {
+      if (task.status === 'finished') {
+        setFinishedTasks(finishedTasks - 1)
+      }
+      return  task.id !== taskId
+    })
+
+    setTasks(updatedTasks)
+  }
+
 
 
   return (
@@ -108,6 +119,7 @@ function App() {
                   content={task.content} 
                   status={task.status}
                   onChangeTaskStatus={changeTaskStatus} 
+                  onDeleteTask={deleteTask}
                 />
               )
             })}
